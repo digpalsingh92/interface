@@ -34,7 +34,7 @@ To get started with the Pet Appointment Booking Website, follow the instructions
    ```bash
    git clone https://github.com/your-username/pet-appointment-booking.git
 
-2. ``bash
+2. ```bash
    cd pet-appointment-booking
  // navigate to the respective project directory
 
