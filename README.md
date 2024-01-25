@@ -38,10 +38,12 @@ To get started with the Pet Appointment Booking Website, follow the instructions
    cd pet-appointment-booking
  // navigate to the respective project directory
 
-4. npm install
+4. ```bash
+   npm install
 // to install all the required dependecies
 
-5. npm start
+5. ```bash
+   npm start
  -- to start the server also visit - Open your browser and navigate to http://localhost:3000 to view the application.
 
 
