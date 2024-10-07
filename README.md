@@ -1,49 +1,36 @@
-# Pet Appointment Booking Website
-
-Welcome to the Pet Appointment Booking Website! This web application allows users to easily schedule appointments for their pets. Users can specify their pet's name and select the preferred date for the appointment.
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-
-## Features
-
-- **Pet Appointment Booking**: Users can schedule appointments for their pets by providing the pet's name and selecting a preferred date.
-- **React and React Hooks**: Built with React and leverages the power of React Hooks for efficient state management.
-- **Tailwind CSS Styling**: Stylish and responsive design using Tailwind CSS for a modern look and feel.
-- **CRACO Configuration**: Utilizes CRACO (Create React App Configuration Override) for customizing the build process.
-
-## Technologies Used
-
-- [React](https://reactjs.org/)
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-- [CRACO](https://github.com/gsoft-inc/craco)
-- [Tailwind CSS](https://tailwindcss.com/)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-To get started with the Pet Appointment Booking Website, follow the instructions below.
+First, run the development server:
 
-### Installation
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-1. Clone the repository:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-   ```bash
-   git clone https://github.com/your-username/pet-appointment-booking.git
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-2. ```bash
-   cd pet-appointment-booking
- // navigate to the respective project directory
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-4. ```bash
-   npm install
-// to install all the required dependecies
+## Learn More
 
-5. ```bash
-   npm start
- -- to start the server also visit - Open your browser and navigate to http://localhost:3000 to view the application.
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
