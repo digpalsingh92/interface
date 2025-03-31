@@ -4,7 +4,6 @@ import { MenuItems } from "@/types/Home";
 import { Button } from "../button";
 import { Sheet, SheetContent, SheetTrigger } from "../sheet";
 import { Menu } from "lucide-react";
-// import { DarkMode } from "@/components/DarkMode";
 
 const menuItems: MenuItems[] = [
   { id: 0, name: "Home", link: "/" },
@@ -15,9 +14,9 @@ const menuItems: MenuItems[] = [
 ];
 export default function Navbar() {
 
-
+  // bg-[#e6f2ff]
   return (
-    <nav className="flex w-full h-20 bg-[#e6f2ff] justify-around items-center">
+    <nav className="flex w-full h-20 justify-around items-center">
       {/* {LOGO} */}
       <Link href={"/"} className="text-xl font-semibold">
         Vets-For-Pets
@@ -63,7 +62,6 @@ export default function Navbar() {
           Get Started
         </Link>
       </button>
-      {/* <DarkMode /> */}
     </nav>
   );
 }

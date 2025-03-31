@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
 import Doctor from "../../../assets/Doctor.png";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function MainSection() {
   return (
-    <div className=" container bg-[#e6f2ff] flex flex-col items-center">
+    <motion.div className="container flex flex-col items-center"
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 10 }}
+    transition={{ duration: 0.8, delay: 0.3 }}
+    >
       {/* Main Content */}
       <div className="w-[90%] container lg:w-[70%] h-full p-4 font-semibold flex flex-col-reverse lg:flex-row justify-around items-center">
         {/* Left Section */}
@@ -14,7 +20,9 @@ export default function MainSection() {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start w-full">
             <Button className="bg-blue-600 font-mono px-6 py-2 w-full sm:w-auto">
-              Book an Appointment
+             <Link href={"/login"}>
+             Book an Appointment
+             </Link>
             </Button>
             <Button className="bg-transparent hover:bg-transparent shadow-none text-black font-bold font-sans flex items-center w-full sm:w-auto">
               View Services
@@ -38,7 +46,7 @@ export default function MainSection() {
       </div>
 
       {/* Info Section */}
-      <div className="bg-[#8ac4f8] w-full h-24 flex z-10 flex-wrap rounded-2xl justify-around p-4">
+      {/* <div className="bg-[#8ac4f8] w-full h-24 flex z-10 flex-wrap rounded-2xl justify-around p-4">
         <div className="flex flex-col items-center m-2">
           <span className="text-3xl md:text-4xl text-white font-bold">
             24/7
@@ -55,7 +63,7 @@ export default function MainSection() {
           </span>
           <span className="text-sm text-white">Active Patients</span>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </motion.div>
   );
 }

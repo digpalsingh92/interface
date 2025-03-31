@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { CalendarDays, FlaskConical, PhoneCall } from "lucide-react";
 import React from "react";
+import {motion} from "framer-motion";
 
 const cardItems = [
   {
@@ -31,7 +32,7 @@ const cardItems = [
 
 export default function SecondSection() {
   return (
-    <section className="container mx-auto bg-[#e6f2ff] md:py-14 flex flex-col items-center">
+    <section className="container mx-auto  md:py-14 flex flex-col items-center">
       <div className="flex flex-col md:flex-row lg:flex-row items-center">
         <div className="w-full md:w-[50%] lg:w-[50%] px-10 py-10">
           <span className="text-6xl">
@@ -51,7 +52,10 @@ export default function SecondSection() {
         </div>
       </div>
 
-      <div className="w-full h-full flex flex-wrap items-center justify-around gap-6 p-6">
+      <motion.div className="w-full h-full flex flex-wrap items-center justify-around gap-6 p-3"
+       initial={{ opacity: 0, x: -50 }}
+       animate={{ opacity: 1, x: 0 }}
+       transition={{ duration: 0.8 }}>
         {cardItems.map((item) => {
           const lighterColor = `${item.color}33`; // Adding `33` for a transparent/light effect
           return (
@@ -76,7 +80,7 @@ export default function SecondSection() {
             </Card>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

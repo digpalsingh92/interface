@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/ui/Layout/Navbar";
 import { Roboto } from 'next/font/google'
 import Footer from "@/components/ui/Layout/Footer";
-import { ThemeProvider } from "@/components/theme-provider";
  
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -27,11 +26,9 @@ export default function RootLayout({
       <body
         className={`${roboto.className}`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar/>
         {children}
         <Footer/>
-        </ThemeProvider>
       </body>
     </html>
   );

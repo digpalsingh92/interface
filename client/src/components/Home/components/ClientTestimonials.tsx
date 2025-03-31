@@ -1,16 +1,17 @@
-"use client";
-
 import * as React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FaStar } from "react-icons/fa";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import Doctor from "@/assets/Doctor.png";
+import Image from "next/image";
+import FloatingShape from "@/components/ui/Shape";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -62,29 +63,85 @@ const testimonials = [
 
 export function ClientTestimonials() {
   return (
-    <div className="flex flex-col items-center justify-center px-10 py-10">
-      <Carousel className="w-full max-w-5xl">
+    <motion.div
+      className="flex flex-col w-full relative items-center px-8 py-8"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+    >
+      <FloatingShape
+        color="bg-blue-800"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="10%"
+        left="80%"
+        delay={0}
+      />
+      <FloatingShape
+        color="bg-green-500"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="10%"
+        left="60%"
+        delay={0}
+      />
+      <FloatingShape
+        color="bg-blue-300"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="50%"
+        left="40%"
+        delay={1}
+      />
+      <FloatingShape
+        color="bg-green-300"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="10%"
+        left="5%"
+        delay={0}
+      />
+      <FloatingShape
+        color="bg-blue-200"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="-10%"
+        left="35%"
+        delay={1}
+      />
+      <FloatingShape
+        color="bg-green-200"
+        size="w-16 h-16 md:w-24 md:h-24"
+        top="-10%"
+        left="35%"
+        delay={0}
+      />
+      <Carousel className="w-full max-w-[80rem]">
         <CarouselContent className="-ml-2">
           {testimonials.map((testimonial) => (
             <CarouselItem
               key={testimonial.id}
-              className="px-2 md:basis-1/2 lg:basis-1/3" // 1 item on small screens, 2 on tablets, 3 on large screens
+              className="px-4 md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="flex flex-col items-center justify-between p-6 shadow-lg w-full">
-                <CardHeader className="flex flex-col items-center">
+              <Card
+                className={`flex flex-col items-center bg-[] justify-between shadow-none w-full`}
+              >
+                <CardHeader className="flex flex-row items-center justify-start w-full gap-4">
                   <span className="w-20 h-20 rounded-full flex items-center justify-center bg-gray-200">
-                    <img
-                      src={testimonial.image.src}
-                      alt="Testimonial"
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={80}
+                      height={80}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </span>
-                  <CardTitle className="mt-2">{testimonial.name}</CardTitle>
-                  <CardDescription>{testimonial.title}</CardDescription>
+                  <CardTitle className="">
+                    <div className="gap-1 flex items-center">
+                      <span>{testimonial.name} -</span>
+                      <span>{testimonial.title}</span>
+                    </div>
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+
+                <CardContent className="">
                   <p className="text-gray-800">{testimonial.content}</p>
-                  <div className="flex justify-center mt-3">
+                  <div className="flex mt-3">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <FaStar
                         key={index}
@@ -102,10 +159,10 @@ export function ClientTestimonials() {
           ))}
         </CarouselContent>
 
-        {/* Prev & Next Buttons */}
-        <CarouselPrevious className="absolute left-[-2.5rem] top-1/2 -translate-y-1/2" />
-        <CarouselNext className="absolute right-[-2.5rem] top-1/2 -translate-y-1/2" />
+        {/* Prev & Next Buttons - Visible only on large screens */}
+        <CarouselPrevious className="hidden md:flex absolute left-[-2.5rem] top-1/2 -translate-y-1/2" />
+        <CarouselNext className="hidden md:flex absolute right-[-2.5rem] top-1/2 -translate-y-1/2" />
       </Carousel>
-    </div>
+    </motion.div>
   );
 }
