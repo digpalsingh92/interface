@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       <button className="bg-black font-semibold text-white p-3 rounded-3xl hover:text-black hover:bg-white hover:border hover:border-black">
-        <Link className="p-4" href={"/login"}>
+        <Link className="p-4" href={"/signup"}>
           Get Started
         </Link>
       </button>

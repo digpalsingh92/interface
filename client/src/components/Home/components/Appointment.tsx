@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Doctor from "@/assets/cartoon_doctor.png";
-import FloatingShape from "@/components/ui/Shape";
 
 const Appointment = () => {
   return (
-    <div className="relative bg-gradient-to-tr from-blue-400 to-blue-200 p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-6 space-x-6 md:space-y-0 md:space-x-6">
+    <div className="relative bg-gradient-to-tr from-blue-400 to-blue-200 p-4 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-6 space-x-6 md:space-y-0 md:space-x-6">
       {/* Text Section */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}

@@ -5,6 +5,7 @@ import MainSection from "./components/MainSection";
 import SecondSection from "./components/SecondSection";
 import {ClientTestimonials} from "./components/ClientTestimonials";
 import Appointment from "./components/Appointment";
+import DoctorSection from "./components/Doctors";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <SecondSection />
       <Appointment />
       <ClientTestimonials />
+      <DoctorSection/>
     </div>
   );
 }
